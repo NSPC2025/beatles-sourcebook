@@ -1,0 +1,60 @@
+site_name: The Beatles Sourcebook
+site_description: A primary-source, fact-checked archive for recording history and studio documentation.
+repo_name: beatles-sourcebook
+repo_url: https://github.com/nspc2025/beatles-sourcebook
+
+theme:
+  name: material
+  custom_dir: docs/overrides # Optional: for future custom styling
+  palette:
+    # Light Mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark Mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  font:
+    text: Inter
+    code: Roboto Mono
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+
+nav:
+  - Home: index.md
+  - Chronology & Sessions: 01-chronology/
+  - Song Catalog: 02-catalog/
+  - Studio & Gear: 03-studio-and-gear/
+  - Personnel: 04-personnel/
+  - Source Registry: 05-source-registry/
